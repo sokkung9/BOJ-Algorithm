@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		String[] s = scan.nextLine().split(" ");
+		int a = Integer.parseInt(s[0]);
+		int b = Integer.parseInt(s[1]);
+
+		if(a > b)
+			System.out.println(">");
+		if(a < b)
+			System.out.println("<");
+		if(a == b)
+			System.out.println("==");
+		scan.close();
+
+	}
+
+}
