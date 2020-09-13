@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int n1 = scan.nextInt();
+		int n2 = scan.nextInt();
+
+		int m1 = n2 % 10;
+		int m2 = (n2 % 100) / 10;
+		int m3 = n2 / 100;
+
+		
+		int r1 = n1 * m1;
+		int r2 = n1 * m2;
+		int r3 = n1 * m3;
+
+		System.out.println(r1);
+		System.out.println(r2);
+		System.out.println(r3);
+		System.out.println(r1 + (r2 * 10) + (r3 * 100));
+		
+		scan.close();
+
+	}
+
+}
