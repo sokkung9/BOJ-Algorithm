@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		String[] s = scan.nextLine().split(" ");
+		int h = Integer.parseInt(s[0]);
+		int m = Integer.parseInt(s[1]);
+		
+		// 분 체크
+		if (m < 45) {
+			m = 60 + (m - 45);
+			// 시 체크
+			if (h == 0) {
+				h = 23;
+			} else {
+				h -= 1;
+			}
+		} else {
+			m -= 45;
+		}
+		System.out.println(h + " " + m);	
+	}
+}
